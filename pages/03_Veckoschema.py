@@ -44,6 +44,7 @@ def exercise_widgets_update_db(widget_str, week, day, workout):
     db_item = db.get(week)
     db_item[day][workout][widget_str] =\
             st.session_state[f"{widget_str}{week}{day}{workout}"]
+    db.put(db_item)
 
 def display_exercises(item, day):
     for key in item[day].keys():                        
@@ -197,7 +198,6 @@ choice = helper_funcs.options_menu_dev(page)
 
 if choice == "show":
     weeks = select_weeks()
-    
     display_week(db.fetch().items, weeks)
 
 if choice == "add/edit":
