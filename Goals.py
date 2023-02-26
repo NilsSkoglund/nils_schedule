@@ -210,6 +210,7 @@ html_str = f"""
 <style>
 p.a {{
   font: bold {24}px Courier;
+  text-align:center;
 }}
 </style>
 <p class="a">{text}</p>
