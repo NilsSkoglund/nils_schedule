@@ -204,15 +204,8 @@ with st.expander("Ändra år och kvartal"):
                             
 st.write("---")
 page = "_mål"
-title_alignment="""
-<style>
-h2 {
-  text-align: center
-}
-</style>
-"""
-st.markdown(title_alignment, unsafe_allow_html=True)
 st.subheader(f"Mål för {välj_kvartal} - {välj_år}")
+st.write("---")
 
 choice = helper_funcs.options_menu_dev(page)
 
