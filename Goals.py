@@ -187,7 +187,9 @@ def edit_goals(kvartal, år):
 
 ################################# Program #####################################
 
-
+page = "_mål"
+choice = helper_funcs.options_menu_dev(page)
+st.write("---")
 
 with st.expander("Ändra år och kvartal"):
     current_year = st.session_state["current_year"]
@@ -202,12 +204,8 @@ with st.expander("Ändra år och kvartal"):
                             , index=st.session_state["current_quarter"]
                             , horizontal=True)
                             
-st.write("---")
-page = "_mål"
 st.subheader(f"Mål för {välj_kvartal} - {välj_år}")
 st.write("---")
-
-choice = helper_funcs.options_menu_dev(page)
 
 if choice == "show":
     display_goals(välj_kvartal, välj_år)
