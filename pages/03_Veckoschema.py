@@ -197,6 +197,7 @@ choice = helper_funcs.options_menu_dev(page)
 
 if choice == "show":
     weeks = select_weeks()
+    st.write("---")
     display_week(db.fetch().items, weeks)
 
 if choice == "add/edit":
