@@ -202,9 +202,10 @@ with st.expander("Ändra år och kvartal"):
                             , ('Q1', 'Q2', 'Q3', 'Q4')
                             , index=st.session_state["current_quarter"]
                             , horizontal=True)
-st.write("---")
+st.write("")
                             
 st.subheader(f"{välj_kvartal} - {välj_år}")
+st.write("")
 
 if choice == "show":
     display_goals(välj_kvartal, välj_år)
