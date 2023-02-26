@@ -191,7 +191,8 @@ if "välj_år" not in st.session_state:
     st.session_state["välj_år"] = st.session_state["current_year"]
 
 if "välj_kvartal" not in st.session_state:
-    st.session_state["välj_kvartal"] = st.session_state["current_quarter"]
+    st.session_state["välj_kvartal"] =\
+          "Q" + str(st.session_state["current_quarter"]+1)
 
 st.header(f"{st.session_state['välj_kvartal']}\
            - {st.session_state['välj_år']}")
