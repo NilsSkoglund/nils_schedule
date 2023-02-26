@@ -188,10 +188,10 @@ def edit_goals(kvartal, år):
 ################################# Program #####################################
 
 if "välj_år" not in st.session_state:
-    st.session_state["välj_år"] == st.session_state["current_year"]
+    st.session_state["välj_år"] = st.session_state["current_year"]
 
 if "välj_kvartal" not in st.session_state:
-    st.session_state["välj_kvartal"] == st.session_state["current_quarter"]
+    st.session_state["välj_kvartal"] = st.session_state["current_quarter"]
 
 st.header(f"{st.session_state['välj_kvartal']}\
            - {st.session_state['välj_år']}")
@@ -205,11 +205,11 @@ with st.expander("Ändra år och kvartal"):
     
     st.session_state["välj_år"] = int(välj_år)
 
-    st.radio("Vilket kvartal vill du se?"
+    välj_kvartal = st.radio("Vilket kvartal vill du se?"
                             , ('Q1', 'Q2', 'Q3', 'Q4')
                             , index=st.session_state["current_quarter"]
-                            , horizontal=True
-                            , key="välj_kvartal")
+                            , horizontal=True)
+    st.session_state["välj_kvartal"] = välj_kvartal
                             
 
 page = "_mål"
