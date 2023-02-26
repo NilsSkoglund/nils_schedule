@@ -191,7 +191,6 @@ def menu_remove_workout():
 ################################## Program ####################################
 
 st.subheader(f"Dagens datum: {datetime.now().date()}")
-st.write(f"Veckonummer: {current_week}")
 
 page = "veckoschema"
 choice = helper_funcs.options_menu_dev(page)
