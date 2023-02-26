@@ -204,7 +204,19 @@ with st.expander("Ändra år och kvartal"):
                             , horizontal=True)
 st.write("")
                             
-st.subheader(f"{välj_kvartal} - {välj_år}")
+#st.subheader(f"{välj_kvartal} - {välj_år}")
+text = f"{välj_kvartal} - {välj_år}"
+html_str = f"""
+<style>
+p.a {{
+  font: bold {24}px Courier;
+}}
+</style>
+<p class="a">{text}</p>
+"""
+
+st.markdown(html_str, unsafe_allow_html=True)
+
 st.write("")
 
 if choice == "show":
