@@ -106,8 +106,6 @@ def remove_recommendations():
 page = "allmänt"
 choice = helper_funcs.options_menu_dev(page)
 
-st.markdown("---")
-
 if choice == "show":
     display_recommendations()
 
