@@ -53,6 +53,7 @@ def display_recommendations():
              list(filter(lambda item: item['Rubrik'] == rubrik, items))
         for item in filtered_items:
             st.write(item["Comment"])
+        st.write("---")
 
 def edit_recommendations():
     items = fetch_from_db()
@@ -100,7 +101,7 @@ def remove_recommendations():
                     , on_change=remove_single_recommendation
                     , args=(item["key"], )
                     , label_visibility="visible")
-            st.markdown("---")
+        st.markdown("---")
 
 ################################# Program #####################################
 page = "allmänt"
