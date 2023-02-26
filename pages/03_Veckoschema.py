@@ -72,7 +72,7 @@ def display_exercises(item, day):
 def display_week(db_items, weeks):
     for item in db_items:
         if item["key"] in weeks:
-            st.header(f"Vecka {item['key']}")
+            st.subheader(f"Vecka {item['key']}")
             for day in lista_veckodagar:
                 if len(item[day]) > 0:
                     with st.expander(day):
