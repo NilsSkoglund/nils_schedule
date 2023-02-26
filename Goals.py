@@ -205,53 +205,14 @@ page = "_mål"
 
 choice = helper_funcs.options_menu_dev(page)
 
-st.markdown("---")
-
 if choice == "show":
     display_goals(välj_kvartal, välj_år)
 
 if choice == "add":
-    st.write("---")
     skapa_mål_func(välj_kvartal, välj_år)
 
 if choice == "edit":
-    st.write("---")
     edit_goals(välj_kvartal, välj_år)
 
 if choice == "remove":
-    st.write("---")
     meny_ta_bort_mål(välj_kvartal, välj_år)
-
-# st.radio("Välj vy"
-#         , ("Visningsvy", "Redigeringsvy")
-#         , horizontal=True
-#         , label_visibility="collapsed"
-#         , key = "vy_mål")
-            
-# st.markdown("---")
-
-
-# if st.session_state["vy_mål"] == "Visningsvy":
-#     display_goals(välj_kvartal, välj_år)
-
-# if st.session_state["vy_mål"] == "Redigeringsvy":
-
-#     st.radio("Välj ..."
-#             , ("Lägg till", "Redigera", "Ta bort")
-#             , horizontal=True
-#             , label_visibility="collapsed"
-#             , key = "val_redigering_mål")
-
-#     if st.session_state["val_redigering_mål"] == "Lägg till":
-#         st.write("---")
-#         skapa_mål_func(välj_kvartal, välj_år)
-#     elif st.session_state["val_redigering_mål"] == "Redigera":
-#         st.write("---")
-#         edit_goals(välj_kvartal, välj_år)
-#     elif st.session_state["val_redigering_mål"] == "Ta bort":
-#         st.write("---")
-#         meny_ta_bort_mål(välj_kvartal, välj_år)    
-
-
-
-
