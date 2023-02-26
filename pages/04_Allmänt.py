@@ -112,38 +112,10 @@ if choice == "show":
     display_recommendations()
 
 if choice == "add":
-    st.write("---")
     add_recommendation()
 
 if choice == "edit":
-    st.write("---")
     edit_recommendations()
 
 if choice == "remove":
-    st.write("---")
     remove_recommendations()
-# vy = st.radio("Välj vy"
-#             , ("Visningsvy", "Redigeringsvy")
-#             , horizontal=True
-#             , label_visibility="collapsed")
-            
-# st.markdown("---")
-
-# if vy == "Redigeringsvy":
-
-#     val_redigering = st.radio("Välj ..."
-#                             , ("Lägg till", "Redigera", "Ta bort")
-#                             , horizontal=True
-#                             , label_visibility="collapsed")
-#     if val_redigering == "Lägg till":
-#         st.write("---")
-#         add_recommendation()
-#     elif val_redigering == "Redigera":
-#         st.write("---")
-#         edit_recommendations()
-#     elif val_redigering == "Ta bort":
-#         st.write("---")
-#         remove_recommendations()
-
-# elif vy == "Visningsvy":
-#     display_recommendations()
