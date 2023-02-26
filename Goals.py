@@ -200,13 +200,14 @@ with st.expander("Ändra år och kvartal"):
                             , index=st.session_state["current_quarter"]
                             , horizontal=True)
                             
-st.header(f"{välj_kvartal} - {välj_år}")
+
 st.write("---")
 page = "_mål"
 
 choice = helper_funcs.options_menu_dev(page)
 
 if choice == "show":
+    st.header(f"{välj_kvartal} - {välj_år}")
     display_goals(välj_kvartal, välj_år)
 
 if choice == "add":
